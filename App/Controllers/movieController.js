@@ -15,18 +15,26 @@ function getMood(button){
   let genre 
   switch(button.value) {
     case "sad":
-      genre = "drama"
+      genre = "18"
       break;
     case "happy":
-      genre = "comedy"
+      genre = "35"
       break;
     case "excited":
-      genre = "action"
+      genre = "12"
       break;
     default:
-      genre = "angry"
-}
+      genre = "27"
+  }
   store.genre = genre
   getFilms()
    $('#mood').fadeOut("slow")
 }
+
+function createMovies(){
+  store.searchResults.forEach((movie) => {
+    
+    new Movie(movie.original_title, movie.poster_path, movie.overview, movie.release_date)
+  })
+}
+
