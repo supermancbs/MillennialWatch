@@ -8,19 +8,25 @@
     <link rel="stylesheet" type="text/css" href="resources/style.css">
     <script src="resources/handlebars-v4.0.5.js"></script>
     <script src="resources/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="App/Adapter/adapter.js"></script>
+    <script src="App/Controllers/userController.js"></script>
 </head>
 
 <body>
-  <header id="header">
-  </header>
-  <div>
-    <form id="search_bar" class="text-center" onsubmit="getAge();return false;">
-      <button class="btn-default" type="submit" value="true">True</button>
-      <button class="btn-default" type="submit" value="false">False</button>
+  <div id="generation" class="text-center">
+      <button class="btn-default" onclick="getAge(this);return false;" type="submit" value="1950">Babyboomer?</button>
+      <button class="btn-default" onclick="getAge(this);return false;" type="submit" value="1975">Generation X?</button>
+      <button class="btn-default" onclick="getAge(this);return false;" type="submit" value="1990">Millennial?</button>
+      <button class="btn-default" onclick="getAge(this);return false;" type="submit" value="2005">Generation Z?</button>
+ 
+  </div>
+    <form id="mood" class="text-center" onsubmit="getMood();return false;">
+        <button class="btn-default" type="submit" value="happy">Happy</button>
+        <button class="btn-default" type="submit" value="angry">Angry</button>
+        <button class="btn-default" type="submit" value="sad">Sad</button>
+        <button class="btn-default" type="submit" value="excited">Excited</button>
     </form>
   </div>
 </body>
-
-
 
 </html>
