@@ -8,9 +8,10 @@ function getAge(button){
   var template = Handlebars.compile(source)
   $('#mood').empty()
   $('#mood').append(template)
+
 }
 
-function getMood(){
-  store.populateMood = $('#mood').val()
-   $('#mood').fadeOut("slow");return false;
+function getMood(button){
+  store.populateMood = button.value
+   $('#mood').fadeOut("slow")
 }
