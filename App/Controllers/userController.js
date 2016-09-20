@@ -12,6 +12,21 @@ function getAge(button){
 }
 
 function getMood(button){
-  store.populateMood = button.value
+  let genre 
+  switch(button.value) {
+    case "sad":
+      genre = "drama"
+      break;
+    case "happy":
+      genre = "comedy"
+      break;
+    case "excited":
+      genre = "action"
+      break;
+    default:
+      genre = "angry"
+}
+  store.genre = genre
+  getFilms()
    $('#mood').fadeOut("slow")
 }
